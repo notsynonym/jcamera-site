@@ -1,0 +1,81 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.header {
+  background: url('https://www.singlecolorimage.com/get/3498db/1920x600') no-repeat center center;
+  background-size: cover;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  text-align: center;
+  flex-direction: column; /* Alinha o conteúdo em coluna */
+}
+
+.header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.header-description {
+  font-size: 1.2em;
+  margin-top: 20px;
+  font-weight: lighter;
+}
+
+
+.content {
+  padding: 50px;
+}
+
+.content h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.content h2.visible, .content p.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.carousel .carousel-item {
+  background-color: #4e4e4e; /* Fundo cinza */
+  height: 600px; /* Altura ajustável */
+  display: flex;
+  flex-direction: column; /* Organiza itens verticalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: flex-start; /* Alinha itens à esquerda */
+  padding: 0 20%; /* Adiciona espaçamento nas laterais */
+  text-align: left; /* Texto alinhado à esquerda */
+}
+
+.carousel .carousel-content h3 {
+  color: #fff; /* Cor do título */
+  font-size: 28px; /* Tamanho do título */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.carousel .carousel-content p {
+  color: #fff; /* Cor do texto */
+  font-size: 18px; /* Tamanho do texto */
+  line-height: 1.5; /* Altura da linha */
+  text-align: justify; /* Justifica o texto */
+}
+
