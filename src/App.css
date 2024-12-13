@@ -14,7 +14,7 @@ body {
   align-items: center;
   color: black;
   text-align: center;
-  flex-direction: column; /* Alinha o conteúdo em coluna */
+  flex-direction: column;
 }
 
 .header h1 {
@@ -28,7 +28,6 @@ body {
   font-weight: lighter;
 }
 
-
 .content {
   padding: 50px;
 }
@@ -36,46 +35,150 @@ body {
 .content h2 {
   font-size: 2em;
   margin-bottom: 20px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .content p {
   font-size: 1.2em;
   line-height: 1.6;
   margin-bottom: 20px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.content h2.visible, .content p.visible {
-  opacity: 1;
-  transform: translateY(0);
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-color: #4e4e4e;
+  overflow: hidden;
 }
 
-.carousel .carousel-item {
-  background-color: #4e4e4e; /* Fundo cinza */
-  height: 600px; /* Altura ajustável */
+.carousel {
   display: flex;
-  flex-direction: column; /* Organiza itens verticalmente */
-  justify-content: center; /* Centraliza verticalmente */
-  align-items: flex-start; /* Alinha itens à esquerda */
-  padding: 0 20%; /* Adiciona espaçamento nas laterais */
-  text-align: left; /* Texto alinhado à esquerda */
+  flex-wrap: nowrap;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 
-.carousel .carousel-content h3 {
-  color: #fff; /* Cor do título */
-  font-size: 28px; /* Tamanho do título */
-  margin-bottom: 20px; /* Espaço abaixo do título */
+.carousel-item {
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 10%;
+  box-sizing: border-box;
+  color: white;
+  text-align: left;
 }
 
-.carousel .carousel-content p {
-  color: #fff; /* Cor do texto */
-  font-size: 18px; /* Tamanho do texto */
-  line-height: 1.5; /* Altura da linha */
-  text-align: justify; /* Justifica o texto */
+.carousel-content h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
+.carousel-content p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.testimonials {
+  background: #f7f7f7;
+  padding: 50px;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-item {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.testimonial-item img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial-text {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.testimonial-name {
+  font-weight: bold;
+}
+
+.contact-form {
+  padding: 50px;
+  background: #f4f4f4;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.contact-form textarea {
+  height: 120px;
+}
+
+.contact-form button {
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #2980b9;
+}
