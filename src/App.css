@@ -182,3 +182,47 @@ body {
 .contact-form button:hover {
   background: #2980b9;
 }
+
+.navbar {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent; 
+  z-index: 1000; 
+  padding: 20px 40px;
+  display: flex;
+  justify-content: flex-end; 
+  box-sizing: border-box; 
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-list li {
+  margin: 0 15px;
+}
+
+.navbar-list a {
+  text-decoration: none;
+  color: white; 
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar-list a:hover {
+  color: #00aced; 
+}
+
+
+.header {
+  background-color: #007BFF; 
+  color: white;
+  padding: 120px 20px 40px; 
+  text-align: center;
+}
